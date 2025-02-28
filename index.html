@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Animals</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="CSS/style.css" rel="stylesheet" />
+    <style>
+      .form-control.custom-search {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        border-radius: 5px;
+      }
+      .form-control.custom-search::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .image-box {
+        border: 3px solid white;
+        border-radius: 15px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        margin-bottom: 25px;
+        width: 100%;
+        height: 200px;
+      }
+
+      .image-box img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 0;
+        margin-right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-2">
+          <button class="btn btn-dark">Dark</button>
+          <button class="btn btn-light">Light</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Animals</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <input
+            type="text"
+            class="form-control custom-search mb-3"
+            placeholder="Search Animals"
+          />
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-5 justify-content-end">
+          <nav class="nav ms-auto">
+            <a class="nav-link" href="#">Adaptations</a>
+            <a class="nav-link active" href="#">Behavior</a>
+            <a class="nav-link" href="#">Conservation</a>
+            <a class="nav-link" href="#">Diversity</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <div class="image-box">
+            <img src="Images/penguins.jpg" alt="Penguins" />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-box">
+            <img src="Images/puppies.webp" alt="Dogs" />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-box">
+            <img src="Images/Cat.jpg" alt="Cat" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const darkButton = document.querySelector(".btn-dark");
+      const lightButton = document.querySelector(".btn-light");
+
+      darkButton.addEventListener("click", function () {
+        document.body.setAttribute("data-theme", "dark");
+      });
+
+      lightButton.addEventListener("click", function () {
+        document.body.setAttribute("data-theme", "light");
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

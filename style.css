@@ -1,0 +1,36 @@
+body {
+  background-color: #ffffff;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body[data-theme="dark"] {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+.nav-link {
+  color: lightgray;
+}
+
+.nav-link.active {
+  color: white !important;
+  background-color: blue !important;
+  border-radius: 5px;
+}
+
+.image-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.btn-dark,
+.btn-light {
+  margin-right: 0%;
+}
